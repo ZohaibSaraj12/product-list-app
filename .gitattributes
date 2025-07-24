@@ -1,0 +1,22 @@
+
+# Ignore Native Folders Completely
+ios/** linguist-detectable=false
+android/** linguist-detectable=false
+windows/** linguist-detectable=false
+build/** linguist-detectable=false
+
+# Dart Code
+lib/** linguist-language=Dart
+test/** linguist-language=Dart
+*.dart linguist-language=Dart
+*.yaml linguist-language=Dart
+
+# Optionally include CMake, Swift, HTML only if needed:
+windows/runner/CMakeLists.txt linguist-language=CMake
+*.cmake linguist-language=CMake
+
+ios/Runner/** linguist-language=Swift
+*.swift linguist-language=Swift
+
+web/html/** linguist-language=HTML
+*.html linguist-language=HTML
