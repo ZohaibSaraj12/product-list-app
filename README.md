@@ -10,7 +10,7 @@ A simple Flutter app that displays a list of products with their images and pric
 ![Product List](assets/screenshots/product_list.png)
 
 
-## 🖼️ Screen 2 with products list
+## 🖼️ Screen 2 with snack bar feedback
 
 
 ![SnackBar Feedback](assets/screenshots/snackbar_view.png)
@@ -23,6 +23,7 @@ A simple Flutter app that displays a list of products with their images and pric
 - 📲 Tapping a product shows its price in a Snackbar
 - 🎨 Clean and responsive UI using Flutter widgets
 - 📁 Organized project structure for scalability
+- 🏛️ DRY code to improve app efficiency
 
 ---
 
