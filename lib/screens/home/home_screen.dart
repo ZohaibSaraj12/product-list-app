@@ -33,7 +33,23 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      body: Text("data"),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          // card widget to add shopping items
+          return Card(
+            
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            elevation: 4.0,
+            margin: EdgeInsets.all(15.0),
+            child: Text("data")
+          );
+
+
+        },
+      ),
     );
   }
 }
