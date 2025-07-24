@@ -44,7 +44,20 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             elevation: 4.0,
             margin: EdgeInsets.all(15.0),
-            child: Text("data")
+            child: GestureDetector(
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("You tapped ${items[index]["name"]} and its price is ${items[index]["price"]}"),
+                    backgroundColor: Colors.green,
+                    duration: Duration(seconds: 2),
+                    margin: EdgeInsets.all(15.0),
+                    behavior: SnackBarBehavior.floating,
+                  ),
+                );
+              },
+              
+            ),
           );
 
 
