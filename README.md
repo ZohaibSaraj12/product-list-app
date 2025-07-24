@@ -1,16 +1,28 @@
-# scrollable_list_custom_widgets
+# 🛍️ Flutter Product List App
 
-A new Flutter project.
+A simple Flutter app that displays a list of products with their images and prices. Users can tap a product to view its price in a snackbar.
 
-## Getting Started
+![Product List](assets/screenshots/product_list.png)
 
-This project is a starting point for a Flutter application.
+![SnackBar Feedback](assets/screenshots/snackbar_view.png)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📱 Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 📦 Displays product cards with images, titles, and prices
+- 📲 Tapping a product shows its price in a Snackbar
+- 🎨 Clean and responsive UI using Flutter widgets
+- 📁 Organized project structure for scalability
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/your-username/product-list-app.git
+cd product-list-app
+flutter pub get
+flutter run
