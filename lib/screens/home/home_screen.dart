@@ -38,17 +38,21 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (context, index) {
           // card widget to add shopping items
           return Card(
-            
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
             ),
-            elevation: 4.0,
-            margin: EdgeInsets.all(15.0),
+            elevation: 10.0,
+            margin: EdgeInsets.all(20.0),
+            borderOnForeground: true,
+            
             child: GestureDetector(
               onTap: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: Text("You tapped ${items[index]["name"]} and its price is ${items[index]["price"]}"),
+                    
+                    content: Text(
+                      "You tapped ${items[index]["name"]} and its price is ${items[index]["price"]}",
+                    ),
                     backgroundColor: Colors.green,
                     duration: Duration(seconds: 2),
                     margin: EdgeInsets.all(15.0),
@@ -56,10 +60,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
+              
               child: ListTile(
+                
                 leading: ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
-                  child: Image.asset(images[index])),
+                  child: Image.asset(images[index]),
+                ),
                 title: Text(
                   items[index]["name"].toString(),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -68,22 +75,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   items[index]["price"].toString(),
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                 ),
-
-
+                trailing: IconButton(
+                  onPressed: () {
+                    // Navigation logic
+                    debugPrint("Button Clicked");
+                  },
+                  icon: Icon(Icons.arrow_forward_ios_outlined),
+                ),
               ),
             ),
           );
-
-
         },
       ),
     );
   }
 }
-
-
-
-
 
 // ListView(
 //         children: numbers.map((element) => Container(
