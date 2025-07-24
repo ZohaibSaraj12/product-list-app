@@ -56,7 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
-              
+              child: ListTile(
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset(images[index])),
+                title: Text(
+                  items[index]["name"].toString(),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                subtitle: Text(
+                  items[index]["price"].toString(),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                ),
+
+
+              ),
             ),
           );
 
