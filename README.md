@@ -2,7 +2,16 @@
 
 A simple Flutter app that displays a list of products with their images and prices. Users can tap a product to view its price in a snackbar.
 
+## 💻 Demonstration of my project
+
+
+## 🖼️ Screen 1 with products list
+
 ![Product List](assets/screenshots/product_list.png)
+
+
+## 🖼️ Screen 2 with products list
+
 
 ![SnackBar Feedback](assets/screenshots/snackbar_view.png)
 
