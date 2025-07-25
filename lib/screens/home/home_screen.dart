@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
@@ -36,19 +35,21 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: AnimationLimiter(
-
         child: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
             // card widget to add shopping items
             return AnimationConfiguration.staggeredList(
-              delay: Duration(seconds: 4),
+              delay: Duration(seconds: 2),
+
               position: index,
               duration: Duration(seconds: 2),
               child: SlideAnimation(
                 verticalOffset: 50.0,
 
-                child: ScaleAnimation(
+                child: SlideAnimation(
+                  curve: Curves.linear,
+                  delay: Duration(seconds: 2),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -56,12 +57,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     elevation: 10.0,
                     margin: EdgeInsets.all(20.0),
                     borderOnForeground: true,
-                    
+
                     child: GestureDetector(
                       onTap: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            
                             content: Text(
                               "You tapped ${items[index]["name"]} and its price is ${items[index]["price"]}",
                             ),
@@ -72,20 +72,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         );
                       },
-                      
+
                       child: ListTile(
-                        
                         leading: ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(images[index]),
                         ),
                         title: Text(
                           items[index]["name"].toString(),
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
                         ),
                         subtitle: Text(
                           items[index]["price"].toString(),
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
+                          ),
                         ),
                         trailing: IconButton(
                           onPressed: () {
