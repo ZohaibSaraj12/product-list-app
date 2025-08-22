@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
-        title: Text(
+        title: const Text(
           "Product List",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
@@ -29,22 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
           itemBuilder: (context, index) {
             // card widget to add shopping items
             return AnimationConfiguration.staggeredList(
-              delay: Duration(seconds: 2),
+              delay: const Duration(seconds: 2),
 
               position: index,
-              duration: Duration(seconds: 2),
+              duration: const Duration(seconds: 2),
               child: SlideAnimation(
                 verticalOffset: 50.0,
 
                 child: SlideAnimation(
                   curve: Curves.linear,
-                  delay: Duration(seconds: 2),
+                  delay: const Duration(seconds: 2),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     elevation: 10.0,
-                    margin: EdgeInsets.all(20.0),
+                    margin: const EdgeInsets.all(20.0),
                     borderOnForeground: true,
 
                     child: GestureDetector(
@@ -55,8 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               "You tapped ${items[index]["name"]} and its price is ${items[index]["price"]}",
                             ),
                             backgroundColor: Colors.green,
-                            duration: Duration(seconds: 2),
-                            margin: EdgeInsets.all(15.0),
+                            duration: const Duration(seconds: 2),
+                            margin: const EdgeInsets.all(15.0),
                             behavior: SnackBarBehavior.floating,
                           ),
                         );
@@ -69,14 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         title: Text(
                           items[index]["name"].toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
                         subtitle: Text(
                           items[index]["price"].toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13,
                           ),
@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             // Navigation logic
                             debugPrint("Button Clicked");
                           },
-                          icon: Icon(Icons.arrow_forward_ios_outlined),
+                          icon: const Icon(Icons.arrow_forward_ios_outlined),
                         ),
                       ),
                     ),
